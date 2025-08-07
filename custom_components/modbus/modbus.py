@@ -255,6 +255,7 @@ class ModbusHub:
         self._async_cancel_listener: Callable[[], None] | None = None
         self._in_error = False
         self._lock = asyncio.Lock()
+        self.event_connected = asyncio.Event()
         self.hass = hass
         self.name = client_config[CONF_NAME]
         self._config_type = client_config[CONF_TYPE]
@@ -324,6 +325,7 @@ class ModbusHub:
 
         if self._config_delay:
             await asyncio.sleep(self._config_delay)
+        self.event_connected.set()
 
     async def async_setup(self) -> bool:
         """Set up pymodbus client."""

@@ -137,6 +137,7 @@ class BasePlatform(Entity):
     @callback
     def async_run(self) -> None:
         """Remote start entity."""
+        _LOGGER.debug(f"Start updating {self._attr_name}")
         self._async_cancel_update_polling()
         self._async_schedule_future_update(0.1)
         if self._scan_interval > 0:
@@ -177,9 +178,15 @@ class BasePlatform(Entity):
         self._attr_available = False
         self.async_write_ha_state()
 
+    async def async_await_connection(self) -> None:
+        """Wait for first connect."""
+        await self._hub.event_connected.wait()
+        self.async_run()
+
     async def async_base_added_to_hass(self) -> None:
         """Handle entity which will be added."""
-        self.async_run()
+        no_use = asyncio.create_task(self.async_await_connection())
+        _LOGGER.debug(f"connect task {no_use}")
         self.async_on_remove(
             async_dispatcher_connect(self.hass, SIGNAL_STOP_ENTITY, self.async_hold)
         )
