@@ -1,20 +1,38 @@
 Modbus - A Home Assistant custom component.
 === 
 
-WORK IN PROGRESS, DO NOT USE !!!
-
-
 Install
 ===
 
-With HACS:
+**With HACS**:
 
-   Click install.
+- Open HACS
+- Select the 3 dots in the top left corver:
+  <img width="1061" height="111" alt="select" src="https://github.com/user-attachments/assets/bae0fde3-f6e7-4d3d-b53c-397d1c46d7b3" />
 
-Otherwise:
+- Choose "personal repositories" and then add repo
+  "https://github.com/pymodbus-dev/homeassistant_modbus":
 
-   copy the [modbus](https://github.com/pymodbus-dev/homeassistant_modbus/blob/dev/custom_components/modbus)
+  <img width="404" height="338" alt="add repo" src="https://github.com/user-attachments/assets/e9332384-b050-41fc-a012-af8fc9f2bd90" />
+
+- Back in the HACS overview, click on the repository:
+  <img width="1046" height="86" alt="select repo" src="https://github.com/user-attachments/assets/39a64276-4e57-46c8-a452-2afac64caaf3" />
+
+- Download the repository:
+
+
+  <img width="259" height="143" alt="Download" src="https://github.com/user-attachments/assets/835c1aef-c495-4d6d-80ba-36093f12d8da" />
+
+- Continue in HACS, which will ask you to restart your home assistant instance.
+
+**Manually**:
+
+   copy [modbus](https://github.com/pymodbus-dev/homeassistant_modbus/blob/dev/custom_components/modbus)
    folder into your [custom_components folder](https://developers.home-assistant.io/docs/creating_integration_file_structure/#where-home-assistant-looks-for-integrations).
+
+Enjoy a working modbus, if you encounter a problem feel free to open a issue [direcly](https://github.com/pymodbus-dev/homeassistant_modbus/issues>),
+I do also monitor the home assistant issues.
+
 
 Testing 
 ===
