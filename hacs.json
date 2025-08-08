@@ -1,4 +1,5 @@
 {
   "name": "Maintained modbus",
+  "homeassistant": "2025.6.3",
   "render_readme": true
 }
