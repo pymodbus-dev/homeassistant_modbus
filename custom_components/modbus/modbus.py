@@ -377,7 +377,7 @@ class ModbusHub:
     ) -> ModbusPDU | None:
         """Call sync. pymodbus."""
         kwargs: dict[str, Any] = (
-            {ATTR_SLAVE: slave} if slave is not None else {ATTR_SLAVE: 1}
+            {"device_id": slave} if slave is not None else {"device_id": 1}
         )
         entry = self._pb_request[use_call]
 
