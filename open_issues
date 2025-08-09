@@ -5,8 +5,7 @@
 
 # Issues from HA
 #128554 Create Modbus Devices for each listed connection point in Modbus configuration
-#130093 Something is blocking Home Assistant from wrapping up the start up phase
-#138077 Modbus value spike issues since last update (2025.2.x) : values mixed from wrong sensor
+#138077 Modbus value spike issues : values mixed from wrong sensor
 #138585 [pymodbus.logging] Exception response 132 / 0
 #140580 Modbus integration gets stuck every few days
 #142658 TCP/IP modbus connection work only once at HA start
@@ -14,7 +13,6 @@
 #146246 Modbus integration ignores scan_interval and polls sensors far too frequently
 #146872 Modbus configuration doesn't create a device
 #147016 Modbus reading some values wrong from the same device
-#147271 MODBUS - deviation
 #147383 Issue with modbus integration
 #147564 Existing modbus integration of a Smartmeter stopped working as expected after HA update to 2025.6.1
 #148329 Modbus sensors can deliver wrong values, when modbus tries to reconnect.
@@ -23,4 +21,7 @@
 #149494 Modbus TCP: Home Assistant keeps connection persistently open and blocks other clients
 #149649 Modbus slave sensors not available when master sensor is deactivated
 #150191 Modbus dep problem after update to 2025.8.0
+
+# Not solveable
+#147271 MODBUS - deviation
 
